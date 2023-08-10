@@ -8,12 +8,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="myapp_manage" />
+        <module name="ShopX-ManagementSystemManage" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="9" />
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ShopX-ManagementSystemManage" options="-parameters" />
       <module name="myapp_manage" options="-parameters" />
     </option>
   </component>

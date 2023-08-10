@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 spring:
   #解决SpringBoot2.6.0与swagger冲突问题【原因是在springboot2.6.0中将SpringMVC 默认路径匹配策略从AntPathMatcher 更改为PathPatternParser，导致出错，解决办法是切换回原先的AntPathMatcher】
   mvc:
@@ -13,7 +13,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/myapp_manage?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
     username: root
-    password: 123456
+    password: root
     #mybatis-plus内置连接池
     hikari:
       connection-test-query: SELECT 1
