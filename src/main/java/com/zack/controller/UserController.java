@@ -1,7 +1,6 @@
 package com.zack.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zack.pojo.LoginForm;
@@ -37,10 +36,6 @@ public class UserController {
     @PostMapping("/add")
     public Result add(@RequestBody User user) {
         System.out.println(user);
-        User user1 = userService.getOne(new QueryWrapper<User>().eq("name", user.getName()));
-        if (user1 != null) {
-            return Result.fail().message("用户名已存在");
-        }
         userService.saveUser(user);
         return Result.ok();
     }
@@ -71,7 +66,7 @@ public class UserController {
             return Result.ok(token);
         } else {
             //用户名或密码有误
-            return Result.fail().message("用户名或密码有误");
+            return Result.fail().message("用户名或密码有误123");
         }
     }
 
