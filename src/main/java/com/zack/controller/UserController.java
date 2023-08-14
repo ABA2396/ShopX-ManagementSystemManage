@@ -36,6 +36,7 @@ public class UserController {
 
     @PostMapping("/add")
     public Result add(@RequestBody User user) {
+        user.setAuth(2);
         System.out.println(user);
         User user1 = userService.getOne(new QueryWrapper<User>().eq("name", user.getName()));
         if (user1 != null) {
